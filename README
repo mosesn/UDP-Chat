@@ -1,0 +1,19 @@
+/**************
+*Moses Nakamura
+*mnn2104
+*Chat Application
+**************/
+
+The code is mostly self documented--I chose intelligent variables names that describe carefully what they do, so as to avoid confusion.
+
+The chat client handles pushing backlog properly, and updates the table cleanly.  Message sending works fine although there is a newline problem that could be debugged with more time, and sometimes there are two of the ">>>" prompts in a row.  The server outputs some logging information, that with more time would be more complete and more interesting.  Server death has been tested carefully in the deregistration and message sending cases, but not the registration case.
+
+In terms of the test, test case 2 passes fine.  However, test case 1 only works properly if the old process running the client is killed, and the client is spun up completely new again.  I never tested this on multiple machines, so I don't know if it will still work or not, although I don't know why it wouldn't.
+
+I used a map to store the nicks and their info in the client and the server, and another map to store the nicks and the backlogged messages associated with them.  For each, I made custom objects to hold their data properly.  Info needed to be serializable so that it could be serialized for passing to the client.
+
+If you are compiling locally, you need to add guava to the build path.
+
+There is no makefile included because the .class files are included in bin.  This is an eclipse project, so it can also be tested by importing to eclipse and modifying the run configurations.
+
+A usage scenario would be if Google asked everyone in the world to download its hot new desktop application that nuked every consumer computer in the world while preserving the internet, and the only chat application left was this one, stored on a solitary flash drive.  It would be pretty useful, although you can't have multiple chat rooms.  It would be like a global post-apocalyptic IRC channel, although nuking all computers in the world probably cannot be characterized as apocalyptic.

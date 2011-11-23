@@ -1,0 +1,41 @@
+Dumped Output:
+
+Client (nick: bakanaka)
+
+>>>[Welcome, You are registered.]
+>>>
+>>> [Client table updated.]
+>>> [Client table updated.]
+>>>krupa: what is going on 
+>>> [Client table updated.]
+>>>send krupa who are you
+>>> [No ACK from krupa, message sent to server.
+>>> [Messages received by the server and saved.
+>>>
+
+
+Client (nick: krupa)
+>>>[Welcome, You are registered.]
+>>>
+>>> [Client table updated.]
+>>>send bakanaka what is going on
+>>> [Message received by bakanaka.]
+>>>dereg krupa
+[You are Offline.  Bye.]
+>>>
+TERMINATE AND RELAUNCH
+>>>[Welcome, You are registered.]
+>>>You have messages!
+>>>
+bakanaka: 1319639869532 who are you 
+>>>
+>>> [Client table updated.]
+>>>
+
+KILL SERVER
+
+Client (nick bakanaka)
+
+>>>dereg bakanaka
+>>> [Server not responding.]
+>>> [Exiting.]
